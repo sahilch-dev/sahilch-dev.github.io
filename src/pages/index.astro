@@ -1,23 +1,65 @@
 ---
+import "../styles/global.css";
 
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+let title = "Sahil Chourasiya";
+let description = "Backend Developer going full cybernatic.";
+let image = "/blog-placeholder-1.jpg";
 ---
 
 <html lang="en">
 	<head>
+		<!-- Global Metadata -->
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+
+		<!-- Font preloads -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		/>
+
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(image, Astro.url)} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.url} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL(image, Astro.url)} />
 	</head>
 	<body>
-		
-		<h1>Sahil Chourasiya</h1>
+		<nav>
+			<div class="logo"><a  href="/">Sahil Chourasiya</a></div>
+		</nav>
+		<main>
+			<div class="hero-section"></div>
+			<section id="experience"></section>
+			<section id="education"></section>
+		</main>
 		<footer>
-			<a href="https://github.com/sahilch-dev"><i class='fa-brands fa-github' style='font-size:20px'></i></a>
-			<a href="https://linkedin.com/in/sahil-chourasiya">Linkedin</a>
-			<a href="mailto:sahil.chourasiya160@gmail.com"></a>
+			<a href="https://github.com/sahilch-dev">
+				<i class="fa-brands fa-github" style="font-size:20px"></i> Github
+			</a>
+			<a href="https://linkedin.com/in/sahil-chourasiya">
+				<i class="fa-brands fa-linkedin" style="font-size:20px"></i> Linkedin
+			</a>
+			<a href="mailto:sahil.chourasiya160@gmail.com">
+				<i class="fa fa-envelope"></i> Mail Me
+			</a>
 		</footer>
 	</body>
 </html>
