@@ -1,0 +1,47 @@
+---
+import BaseHead from "../components/BaseHead.astro"
+let title = "Sahil Chourasiya";
+let description = "Backend Developer going full cybernatic.";
+
+let image = "/blog-placeholder-1.jpg";
+---
+
+<html lang="en">
+	<head>
+		<!-- Global Metadata -->
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+
+		<!-- Font preloads -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		/>
+
+		<BaseHead title={title} description={description} image={image} />
+	</head>
+	<body>
+		<nav>
+			<div class="logo"><a  href="/">Sahil Chourasiya</a></div>
+		</nav>
+		<main>
+			<div class="hero-section"></div>
+			<section id="experience"></section>
+			<section id="education"></section>
+		</main>
+		<footer>
+			<a href="https://github.com/sahilch-dev">
+				<i class="fa-brands fa-github" style="font-size:20px"></i> Github
+			</a>
+			<a href="https://linkedin.com/in/sahil-chourasiya">
+				<i class="fa-brands fa-linkedin" style="font-size:20px"></i> Linkedin
+			</a>
+			<a href="mailto:sahil.chourasiya160@gmail.com">
+				<i class="fa fa-envelope"></i> Mail Me
+			</a>
+		</footer>
+	</body>
+</html>
